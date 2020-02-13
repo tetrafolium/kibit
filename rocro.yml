@@ -1,24 +1,37 @@
 inspecode:
 
   cljfmt:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 13 }
 
   eastwood:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 19 }
 
   grep:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 1 }
 
   jscpd:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 2 }
 
   kibit:
+  - input:
+    - kibit/
+    #ignore:
+    #- kibit/src/kibit/rules/arithmetic.clj
+    auto-fix: false
+    thresholds: { num-issues: 999 }
+  - input:
+    - kibit-common/
+    auto-fix: true
+    thresholds: { num-issues: 999 }
+  - ignore:
+    - kibit/
+    - kibit-common/
     auto-fix: true
     thresholds: { num-issues: 999 }
 
   lein-test:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   misspell:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 2 }

@@ -13,16 +13,20 @@ inspecode:
     thresholds: { num-issues: 2 }
 
   kibit:
-  - input:
-    - kibit/src/
-    ignore:
-    - kibit/src/kibit/rules/arithmetic.clj  # error on auto-fix
-    auto-fix: true
-    thresholds: { num-issues: 999 }
   - ignore:
     - kibit/src/
     auto-fix: true
     thresholds: { num-issues: 0 }
+  - input:
+    - kibit/src/
+    ignore:
+    - kibit/src/kibit/rules/    # error on auto-fix
+    auto-fix: true
+    thresholds: { num-issues: 999 }
+  - input:
+    - kibit/src/kibit/rules/    # error on auto-fix
+    auto-fix: false
+    thresholds: { num-issues: 999 }
 
   lein-test:
     thresholds: { num-issues: 0 }

@@ -6,6 +6,9 @@ inspecode:
   eastwood:
     thresholds: { num-issues: 19 }
 
+  fossology:
+    thresholds: { num-issues: 999 }
+
   grep:
     thresholds: { num-issues: 1 }
 
